@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(printf "%s\n" "/mnt/c/Users/vitor/Desktop" $(find /mnt/c/Users/vitor/Desktop/Projects ~/projects -mindepth 1 -maxdepth 1 -type d) | fzf)
+    selected=$(printf "%s\n" $(find /etc ~/.config ~/projects ~/work ~/school -mindepth 1 -maxdepth 1 -type d) | fzf)
 fi
 
 if [[ -z $selected ]]; then
